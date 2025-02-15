@@ -18,6 +18,7 @@ namespace HostelMangagementSystem
             InitializeComponent();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=.;Initial Catalog=HostelMgmt;Integrated Security=True;");
+
         void FillRoomDGV()
         {
             Con.Open();

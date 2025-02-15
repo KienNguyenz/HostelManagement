@@ -57,17 +57,18 @@ namespace HotelMangagementSystem
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1017, 125);
+            panel1.Size = new Size(890, 94);
             panel1.TabIndex = 0;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.White;
-            label3.Location = new Point(978, 27);
+            label3.Location = new Point(856, 20);
             label3.Name = "label3";
-            label3.Size = new Size(16, 20);
+            label3.Size = new Size(12, 15);
             label3.TabIndex = 1;
             label3.Text = "x";
             label3.Click += label3_Click;
@@ -77,9 +78,9 @@ namespace HotelMangagementSystem
             label1.AutoSize = true;
             label1.Font = new Font("SimSun", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(288, 40);
+            label1.Location = new Point(252, 30);
             label1.Name = "label1";
-            label1.Size = new Size(473, 37);
+            label1.Size = new Size(373, 30);
             label1.TabIndex = 0;
             label1.Text = "Hostel Management System";
             label1.Click += label1_Click;
@@ -88,9 +89,10 @@ namespace HotelMangagementSystem
             // 
             panel2.BackColor = Color.FromArgb(50, 204, 254);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 125);
+            panel2.Location = new Point(0, 94);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1017, 15);
+            panel2.Size = new Size(890, 11);
             panel2.TabIndex = 1;
             // 
             // bunifuThinButton21
@@ -110,10 +112,10 @@ namespace HotelMangagementSystem
             bunifuThinButton21.IdleFillColor = Color.White;
             bunifuThinButton21.IdleForecolor = Color.Crimson;
             bunifuThinButton21.IdleLineColor = Color.Crimson;
-            bunifuThinButton21.Location = new Point(38, 147);
-            bunifuThinButton21.Margin = new Padding(5, 4, 5, 4);
+            bunifuThinButton21.Location = new Point(33, 110);
+            bunifuThinButton21.Margin = new Padding(4, 3, 4, 3);
             bunifuThinButton21.Name = "bunifuThinButton21";
-            bunifuThinButton21.Size = new Size(130, 50);
+            bunifuThinButton21.Size = new Size(114, 38);
             bunifuThinButton21.TabIndex = 3;
             bunifuThinButton21.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton21.Click += bunifuThinButton21_Click;
@@ -135,10 +137,10 @@ namespace HotelMangagementSystem
             bunifuThinButton22.IdleFillColor = Color.White;
             bunifuThinButton22.IdleForecolor = Color.Crimson;
             bunifuThinButton22.IdleLineColor = Color.Crimson;
-            bunifuThinButton22.Location = new Point(205, 143);
-            bunifuThinButton22.Margin = new Padding(5, 4, 5, 4);
+            bunifuThinButton22.Location = new Point(179, 107);
+            bunifuThinButton22.Margin = new Padding(4, 3, 4, 3);
             bunifuThinButton22.Name = "bunifuThinButton22";
-            bunifuThinButton22.Size = new Size(130, 50);
+            bunifuThinButton22.Size = new Size(114, 38);
             bunifuThinButton22.TabIndex = 4;
             bunifuThinButton22.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton22.Click += bunifuThinButton22_Click;
@@ -160,10 +162,10 @@ namespace HotelMangagementSystem
             bunifuThinButton23.IdleFillColor = Color.White;
             bunifuThinButton23.IdleForecolor = Color.Crimson;
             bunifuThinButton23.IdleLineColor = Color.Crimson;
-            bunifuThinButton23.Location = new Point(381, 143);
-            bunifuThinButton23.Margin = new Padding(5, 4, 5, 4);
+            bunifuThinButton23.Location = new Point(333, 107);
+            bunifuThinButton23.Margin = new Padding(4, 3, 4, 3);
             bunifuThinButton23.Name = "bunifuThinButton23";
-            bunifuThinButton23.Size = new Size(130, 50);
+            bunifuThinButton23.Size = new Size(114, 38);
             bunifuThinButton23.TabIndex = 5;
             bunifuThinButton23.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton23.Click += bunifuThinButton23_Click;
@@ -185,10 +187,10 @@ namespace HotelMangagementSystem
             bunifuThinButton24.IdleFillColor = Color.White;
             bunifuThinButton24.IdleForecolor = Color.Crimson;
             bunifuThinButton24.IdleLineColor = Color.Crimson;
-            bunifuThinButton24.Location = new Point(554, 143);
-            bunifuThinButton24.Margin = new Padding(5, 4, 5, 4);
+            bunifuThinButton24.Location = new Point(485, 107);
+            bunifuThinButton24.Margin = new Padding(4, 3, 4, 3);
             bunifuThinButton24.Name = "bunifuThinButton24";
-            bunifuThinButton24.Size = new Size(130, 50);
+            bunifuThinButton24.Size = new Size(114, 38);
             bunifuThinButton24.TabIndex = 6;
             bunifuThinButton24.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton24.Click += bunifuThinButton24_Click;
@@ -210,10 +212,10 @@ namespace HotelMangagementSystem
             bunifuThinButton25.IdleFillColor = Color.White;
             bunifuThinButton25.IdleForecolor = Color.Crimson;
             bunifuThinButton25.IdleLineColor = Color.Crimson;
-            bunifuThinButton25.Location = new Point(745, 143);
-            bunifuThinButton25.Margin = new Padding(5, 4, 5, 4);
+            bunifuThinButton25.Location = new Point(652, 107);
+            bunifuThinButton25.Margin = new Padding(4, 3, 4, 3);
             bunifuThinButton25.Name = "bunifuThinButton25";
-            bunifuThinButton25.Size = new Size(130, 50);
+            bunifuThinButton25.Size = new Size(114, 38);
             bunifuThinButton25.TabIndex = 7;
             bunifuThinButton25.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton25.Click += bunifuThinButton25_Click;
@@ -221,9 +223,10 @@ namespace HotelMangagementSystem
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(50, 204, 254);
-            panel3.Location = new Point(0, 205);
+            panel3.Location = new Point(0, 154);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1017, 15);
+            panel3.Size = new Size(890, 11);
             panel3.TabIndex = 8;
             // 
             // label2
@@ -231,9 +234,9 @@ namespace HotelMangagementSystem
             label2.AutoSize = true;
             label2.Font = new Font("SimSun", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.DodgerBlue;
-            label2.Location = new Point(345, 222);
+            label2.Location = new Point(302, 166);
             label2.Name = "label2";
-            label2.Size = new Size(302, 37);
+            label2.Size = new Size(238, 30);
             label2.TabIndex = 9;
             label2.Text = "Student Hostels";
             // 
@@ -241,9 +244,10 @@ namespace HotelMangagementSystem
             // 
             pictureBox1.Dock = DockStyle.Bottom;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 274);
+            pictureBox1.Location = new Point(0, 206);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1017, 422);
+            pictureBox1.Size = new Size(890, 316);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -251,9 +255,9 @@ namespace HotelMangagementSystem
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1017, 696);
+            ClientSize = new Size(890, 522);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(panel3);
@@ -265,6 +269,7 @@ namespace HotelMangagementSystem
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

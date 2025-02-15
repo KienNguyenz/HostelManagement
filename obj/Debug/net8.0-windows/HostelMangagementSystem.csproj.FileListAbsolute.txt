@@ -111,3 +111,4 @@ E:\WFA\HotelMangagementSystem\obj\Debug\net8.0-windows\HostelMangagementSystem.S
 E:\WFA\HotelMangagementSystem\bin\Debug\net8.0-windows\Guna.UI2.dll
 E:\WFA\HotelMangagementSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 E:\WFA\HotelMangagementSystem\bin\Debug\net8.0-windows\MaterialSkin.dll
+E:\WFA\HotelMangagementSystem\obj\Debug\net8.0-windows\HostelMangagementSystem.sourcelink.json

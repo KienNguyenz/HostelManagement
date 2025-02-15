@@ -59,17 +59,18 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1017, 60);
+            panel1.Size = new Size(890, 45);
             panel1.TabIndex = 0;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.White;
-            label5.Location = new Point(989, 9);
+            label5.Location = new Point(865, 7);
             label5.Name = "label5";
-            label5.Size = new Size(16, 20);
+            label5.Size = new Size(12, 15);
             label5.TabIndex = 2;
             label5.Text = "x";
             label5.Click += label5_Click;
@@ -79,9 +80,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("SimSun", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(333, 10);
+            label1.Location = new Point(291, 8);
             label1.Name = "label1";
-            label1.Size = new Size(337, 37);
+            label1.Size = new Size(269, 30);
             label1.TabIndex = 0;
             label1.Text = "ROOM INFORMATION";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -90,9 +91,10 @@
             // 
             panel2.BackColor = Color.FromArgb(50, 204, 254);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 60);
+            panel2.Location = new Point(0, 45);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1017, 15);
+            panel2.Size = new Size(890, 11);
             panel2.TabIndex = 1;
             // 
             // label2
@@ -100,9 +102,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("SimSun", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Crimson;
-            label2.Location = new Point(594, 146);
+            label2.Location = new Point(520, 110);
             label2.Name = "label2";
-            label2.Size = new Size(197, 37);
+            label2.Size = new Size(157, 30);
             label2.TabIndex = 2;
             label2.Text = "ROOM LIST";
             // 
@@ -110,9 +112,10 @@
             // 
             RoomNumbertb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             RoomNumbertb.ForeColor = Color.Crimson;
-            RoomNumbertb.Location = new Point(69, 172);
+            RoomNumbertb.Location = new Point(60, 129);
+            RoomNumbertb.Margin = new Padding(3, 2, 3, 2);
             RoomNumbertb.Name = "RoomNumbertb";
-            RoomNumbertb.Size = new Size(125, 30);
+            RoomNumbertb.Size = new Size(110, 26);
             RoomNumbertb.TabIndex = 4;
             RoomNumbertb.Text = "RoomNumber";
             // 
@@ -120,9 +123,10 @@
             // 
             RoomStatusCb.FormattingEnabled = true;
             RoomStatusCb.Items.AddRange(new object[] { "Active", "NotActive" });
-            RoomStatusCb.Location = new Point(158, 232);
+            RoomStatusCb.Location = new Point(138, 174);
+            RoomStatusCb.Margin = new Padding(3, 2, 3, 2);
             RoomStatusCb.Name = "RoomStatusCb";
-            RoomStatusCb.Size = new Size(151, 28);
+            RoomStatusCb.Size = new Size(133, 23);
             RoomStatusCb.TabIndex = 6;
             RoomStatusCb.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -131,9 +135,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Crimson;
-            label3.Location = new Point(12, 234);
+            label3.Location = new Point(10, 176);
             label3.Name = "label3";
-            label3.Size = new Size(130, 20);
+            label3.Size = new Size(106, 16);
             label3.TabIndex = 7;
             label3.Text = "ROOM STATUS";
             // 
@@ -142,9 +146,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Crimson;
-            label4.Location = new Point(12, 283);
+            label4.Location = new Point(10, 212);
             label4.Name = "label4";
-            label4.Size = new Size(53, 20);
+            label4.Size = new Size(43, 16);
             label4.TabIndex = 8;
             label4.Text = "BOOK";
             // 
@@ -153,9 +157,10 @@
             YesRadio.AutoSize = true;
             YesRadio.Checked = true;
             YesRadio.ForeColor = Color.Blue;
-            YesRadio.Location = new Point(158, 283);
+            YesRadio.Location = new Point(138, 212);
+            YesRadio.Margin = new Padding(3, 2, 3, 2);
             YesRadio.Name = "YesRadio";
-            YesRadio.Size = new Size(51, 24);
+            YesRadio.Size = new Size(42, 19);
             YesRadio.TabIndex = 9;
             YesRadio.TabStop = true;
             YesRadio.Text = "Yes";
@@ -165,9 +170,10 @@
             // 
             NoRadio.AutoSize = true;
             NoRadio.ForeColor = Color.Blue;
-            NoRadio.Location = new Point(237, 282);
+            NoRadio.Location = new Point(207, 212);
+            NoRadio.Margin = new Padding(3, 2, 3, 2);
             NoRadio.Name = "NoRadio";
-            NoRadio.Size = new Size(50, 24);
+            NoRadio.Size = new Size(41, 19);
             NoRadio.TabIndex = 10;
             NoRadio.Text = "No";
             NoRadio.UseVisualStyleBackColor = true;
@@ -190,10 +196,10 @@
             bunifuThinButton21.IdleFillColor = Color.White;
             bunifuThinButton21.IdleForecolor = Color.Crimson;
             bunifuThinButton21.IdleLineColor = Color.Crimson;
-            bunifuThinButton21.Location = new Point(31, 429);
-            bunifuThinButton21.Margin = new Padding(6, 5, 6, 5);
+            bunifuThinButton21.Location = new Point(27, 322);
+            bunifuThinButton21.Margin = new Padding(5, 4, 5, 4);
             bunifuThinButton21.Name = "bunifuThinButton21";
-            bunifuThinButton21.Size = new Size(90, 40);
+            bunifuThinButton21.Size = new Size(79, 30);
             bunifuThinButton21.TabIndex = 11;
             bunifuThinButton21.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton21.Click += bunifuThinButton21_Click;
@@ -215,10 +221,10 @@
             bunifuThinButton22.IdleFillColor = Color.White;
             bunifuThinButton22.IdleForecolor = Color.Crimson;
             bunifuThinButton22.IdleLineColor = Color.Crimson;
-            bunifuThinButton22.Location = new Point(136, 429);
-            bunifuThinButton22.Margin = new Padding(6, 5, 6, 5);
+            bunifuThinButton22.Location = new Point(119, 322);
+            bunifuThinButton22.Margin = new Padding(5, 4, 5, 4);
             bunifuThinButton22.Name = "bunifuThinButton22";
-            bunifuThinButton22.Size = new Size(90, 40);
+            bunifuThinButton22.Size = new Size(79, 30);
             bunifuThinButton22.TabIndex = 12;
             bunifuThinButton22.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton22.Click += bunifuThinButton22_Click;
@@ -240,10 +246,10 @@
             bunifuThinButton23.IdleFillColor = Color.White;
             bunifuThinButton23.IdleForecolor = Color.Crimson;
             bunifuThinButton23.IdleLineColor = Color.Crimson;
-            bunifuThinButton23.Location = new Point(239, 429);
-            bunifuThinButton23.Margin = new Padding(6, 5, 6, 5);
+            bunifuThinButton23.Location = new Point(209, 322);
+            bunifuThinButton23.Margin = new Padding(5, 4, 5, 4);
             bunifuThinButton23.Name = "bunifuThinButton23";
-            bunifuThinButton23.Size = new Size(90, 40);
+            bunifuThinButton23.Size = new Size(79, 30);
             bunifuThinButton23.TabIndex = 13;
             bunifuThinButton23.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton23.Click += bunifuThinButton23_Click;
@@ -265,10 +271,10 @@
             bunifuThinButton24.IdleFillColor = Color.White;
             bunifuThinButton24.IdleForecolor = Color.Crimson;
             bunifuThinButton24.IdleLineColor = Color.Crimson;
-            bunifuThinButton24.Location = new Point(136, 495);
-            bunifuThinButton24.Margin = new Padding(6, 5, 6, 5);
+            bunifuThinButton24.Location = new Point(119, 371);
+            bunifuThinButton24.Margin = new Padding(5, 4, 5, 4);
             bunifuThinButton24.Name = "bunifuThinButton24";
-            bunifuThinButton24.Size = new Size(90, 40);
+            bunifuThinButton24.Size = new Size(79, 30);
             bunifuThinButton24.TabIndex = 14;
             bunifuThinButton24.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton24.Click += bunifuThinButton24_Click;
@@ -296,11 +302,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             RoomDGV.DefaultCellStyle = dataGridViewCellStyle3;
             RoomDGV.GridColor = Color.FromArgb(231, 229, 255);
-            RoomDGV.Location = new Point(448, 232);
+            RoomDGV.Location = new Point(392, 174);
+            RoomDGV.Margin = new Padding(3, 2, 3, 2);
             RoomDGV.Name = "RoomDGV";
             RoomDGV.RowHeadersVisible = false;
             RoomDGV.RowHeadersWidth = 51;
-            RoomDGV.Size = new Size(508, 408);
+            RoomDGV.RowTemplate.Height = 29;
+            RoomDGV.Size = new Size(444, 306);
             RoomDGV.TabIndex = 15;
             RoomDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             RoomDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -327,9 +335,9 @@
             // 
             // Rooms
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1017, 696);
+            ClientSize = new Size(890, 522);
             Controls.Add(RoomDGV);
             Controls.Add(bunifuThinButton24);
             Controls.Add(bunifuThinButton23);
@@ -345,6 +353,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Rooms";
             Text = "Rooms";
             Load += Rooms_Load;
