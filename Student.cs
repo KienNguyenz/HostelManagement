@@ -35,7 +35,7 @@ namespace HostelMangagementSystem
         void FillRoomCombobox()
         {
             Con.Open();
-            string query = " Select * from Room_tbl";
+            string query = " Select * from Room_tbl where RoomStatus = '" + "Active"+ "' and Booked= '"+"Free" + "' ";
             SqlCommand cmd = new SqlCommand(query, Con);
             SqlDataReader rdr;
             rdr = cmd.ExecuteReader();
@@ -61,6 +61,8 @@ namespace HostelMangagementSystem
                 MessageBox.Show("Student Successfully Added");
                 Con.Close();
                 FillStudentDGV();
+                FillRoomCombobox();
+
             }
         }
         private void Student_Load(object sender, EventArgs e)
@@ -73,7 +75,24 @@ namespace HostelMangagementSystem
         {
             Application.Exit();
         }
-
+        void updateBookedStatusOnDelete()
+        {
+            Con.Open();
+            String query = " update Room_tbl set Booked= '" + "Free" + "' where RoomNum=" + StudRoomCb.SelectedValue?.ToString() + "";
+            SqlCommand cmd= new SqlCommand(query, Con);
+            cmd.ExecuteNonQuery();
+            //MessageBox.Show("Room Successfully Updated");
+            Con.Close();
+        }
+        void updateBookedStatus()
+        {
+            Con.Open();
+            String query = " update Room_tbl set Booked= '" + "Busy" + "' where RoomNum=" + StudRoomCb.SelectedValue?.ToString() + "";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            cmd.ExecuteNonQuery();
+            //MessageBox.Show("Room Successfully Updated");
+            Con.Close();
+        }
         private void bunifuThinButton28_Click(object sender, EventArgs e)
         {
             Form1 Home = new Form1();
@@ -83,11 +102,51 @@ namespace HostelMangagementSystem
 
         private void bunifuThinButton26_Click(object sender, EventArgs e)
         {
-
+            if (StudUsn.Text == "")
+            {
+                MessageBox.Show("Enter The Room Number");
+            }
+            else
+            {
+                Con.Open();
+                String query = "Update Student_tbl set StuUsn='" + StudName.Text + "',FatherName='" + FatherName.Text + "',MotherName='" + MotherName.Text + "',StdAddress='" + Addresstb.Text + "',College='" + College.Text + "',StdRoom=" + StudRoomCb.SelectedValue?.ToString() + ",StdStatus='" + StudStatusCb.SelectedItem?.ToString() + "' where StuUsn='" + StudUsn.Text + "' ";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student Successfully Updated");
+                Con.Close();
+                FillStudentDGV();
+                FillRoomCombobox();
+            }
         }
-
         private void bunifuThinButton27_Click(object sender, EventArgs e)
         {
+            if (StudUsn.Text == "")
+            {
+                MessageBox.Show("Enter The Student Number");
+            }
+            else
+            {
+                Con.Open();
+                String query = "Delete from Student_tbl where  StuUsn='" + StudUsn.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student Successfully Deleted");
+                Con.Close();
+                updateBookedStatusOnDelete();
+                FillStudentDGV();
+                FillRoomCombobox();
+                
+            }
+        }
+
+        private void StudentDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            StudUsn.Text = StudentDGV.SelectedRows[0].Cells[0].Value.ToString();
+            StudName.Text = StudentDGV.SelectedRows[0].Cells[1].Value.ToString();
+            FatherName.Text = StudentDGV.SelectedRows[0].Cells[2].Value.ToString();
+            MotherName.Text = StudentDGV.SelectedRows[0].Cells[3].Value.ToString();
+            Addresstb.Text = StudentDGV.SelectedRows[0].Cells[4].Value.ToString();
+            College.Text = StudentDGV.SelectedRows[0].Cells[5].Value.ToString();
 
         }
     }

@@ -36,31 +36,32 @@
             panel1 = new Panel();
             label5 = new Label();
             label1 = new Label();
-            textBox4 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox1 = new TextBox();
-            comboBox2 = new ComboBox();
+            EmpAddTb = new TextBox();
+            EmpNameTb = new TextBox();
+            EmpPhoneTb = new TextBox();
+            EmpIdTb = new TextBox();
+            EmpPositionCb = new ComboBox();
             label4 = new Label();
-            comboBox1 = new ComboBox();
+            EmpStatusCB = new ComboBox();
             label2 = new Label();
             label3 = new Label();
             bunifuThinButton28 = new Bunifu.Framework.UI.BunifuThinButton2();
-            bunifuThinButton27 = new Bunifu.Framework.UI.BunifuThinButton2();
-            bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
-            bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
-            RoomDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            DeleteEmp = new Bunifu.Framework.UI.BunifuThinButton2();
+            UpdateEmp = new Bunifu.Framework.UI.BunifuThinButton2();
+            AddEmp = new Bunifu.Framework.UI.BunifuThinButton2();
+            EmployeeDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)RoomDGV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EmployeeDGV).BeginInit();
             SuspendLayout();
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(50, 204, 254);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 60);
+            panel2.Location = new Point(0, 45);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1017, 15);
+            panel2.Size = new Size(890, 11);
             panel2.TabIndex = 22;
             // 
             // panel1
@@ -70,17 +71,18 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1017, 60);
+            panel1.Size = new Size(890, 45);
             panel1.TabIndex = 21;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.White;
-            label5.Location = new Point(989, 9);
+            label5.Location = new Point(865, 7);
             label5.Name = "label5";
-            label5.Size = new Size(16, 20);
+            label5.Size = new Size(12, 15);
             label5.TabIndex = 2;
             label5.Text = "x";
             label5.Click += label5_Click;
@@ -90,90 +92,100 @@
             label1.AutoSize = true;
             label1.Font = new Font("SimSun", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(311, 10);
+            label1.Location = new Point(272, 8);
             label1.Name = "label1";
-            label1.Size = new Size(417, 37);
+            label1.Size = new Size(333, 30);
             label1.TabIndex = 0;
             label1.Text = "EMPLOYEE INFORMATION";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // EmpAddTb
             // 
-            textBox4.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox4.ForeColor = Color.Crimson;
-            textBox4.Location = new Point(57, 330);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(274, 30);
-            textBox4.TabIndex = 26;
-            textBox4.Text = "Address";
+            EmpAddTb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EmpAddTb.ForeColor = Color.Crimson;
+            EmpAddTb.Location = new Point(50, 248);
+            EmpAddTb.Margin = new Padding(3, 2, 3, 2);
+            EmpAddTb.Name = "EmpAddTb";
+            EmpAddTb.Size = new Size(240, 26);
+            EmpAddTb.TabIndex = 26;
+            EmpAddTb.Text = "Address";
             // 
-            // textBox6
+            // EmpNameTb
             // 
-            textBox6.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox6.ForeColor = Color.Crimson;
-            textBox6.Location = new Point(57, 194);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(274, 30);
-            textBox6.TabIndex = 25;
-            textBox6.Text = "EmployeeName";
+            EmpNameTb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EmpNameTb.ForeColor = Color.Crimson;
+            EmpNameTb.Location = new Point(50, 146);
+            EmpNameTb.Margin = new Padding(3, 2, 3, 2);
+            EmpNameTb.Name = "EmpNameTb";
+            EmpNameTb.Size = new Size(240, 26);
+            EmpNameTb.TabIndex = 25;
+            EmpNameTb.Text = "EmployeeName";
             // 
-            // textBox5
+            // EmpPhoneTb
             // 
-            textBox5.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox5.ForeColor = Color.Crimson;
-            textBox5.Location = new Point(57, 258);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(274, 30);
-            textBox5.TabIndex = 24;
-            textBox5.Text = "Phone";
+            EmpPhoneTb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EmpPhoneTb.ForeColor = Color.Crimson;
+            EmpPhoneTb.Location = new Point(50, 194);
+            EmpPhoneTb.Margin = new Padding(3, 2, 3, 2);
+            EmpPhoneTb.Name = "EmpPhoneTb";
+            EmpPhoneTb.Size = new Size(240, 26);
+            EmpPhoneTb.TabIndex = 24;
+            EmpPhoneTb.Text = "Phone";
             // 
-            // textBox1
+            // EmpIdTb
             // 
-            textBox1.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.Crimson;
-            textBox1.Location = new Point(57, 134);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(274, 30);
-            textBox1.TabIndex = 23;
-            textBox1.Text = "Employee ID";
+            EmpIdTb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EmpIdTb.ForeColor = Color.Crimson;
+            EmpIdTb.Location = new Point(50, 100);
+            EmpIdTb.Margin = new Padding(3, 2, 3, 2);
+            EmpIdTb.Name = "EmpIdTb";
+            EmpIdTb.Size = new Size(240, 26);
+            EmpIdTb.TabIndex = 23;
+            EmpIdTb.Text = "Employee ID";
             // 
-            // comboBox2
+            // EmpPositionCb
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Mess Staff", "Accountant", "Cleaner", "Hostel In Charge" });
-            comboBox2.Location = new Point(180, 412);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 28;
+            EmpPositionCb.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            EmpPositionCb.ForeColor = Color.DodgerBlue;
+            EmpPositionCb.FormattingEnabled = true;
+            EmpPositionCb.Items.AddRange(new object[] { "Mess Staff", "Accountant", "Cleaner", "Hostel In Charge" });
+            EmpPositionCb.Location = new Point(158, 309);
+            EmpPositionCb.Margin = new Padding(3, 2, 3, 2);
+            EmpPositionCb.Name = "EmpPositionCb";
+            EmpPositionCb.Size = new Size(133, 23);
+            EmpPositionCb.TabIndex = 28;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Crimson;
-            label4.Location = new Point(0, 414);
+            label4.Location = new Point(0, 310);
             label4.Name = "label4";
-            label4.Size = new Size(97, 20);
+            label4.Size = new Size(79, 16);
             label4.TabIndex = 27;
             label4.Text = "Position";
             // 
-            // comboBox1
+            // EmpStatusCB
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Working", "Left" });
-            comboBox1.Location = new Point(180, 461);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 30;
+            EmpStatusCB.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            EmpStatusCB.ForeColor = Color.DodgerBlue;
+            EmpStatusCB.FormattingEnabled = true;
+            EmpStatusCB.Items.AddRange(new object[] { "Working", "Left" });
+            EmpStatusCB.Location = new Point(158, 346);
+            EmpStatusCB.Margin = new Padding(3, 2, 3, 2);
+            EmpStatusCB.Name = "EmpStatusCB";
+            EmpStatusCB.Size = new Size(133, 23);
+            EmpStatusCB.TabIndex = 30;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Crimson;
-            label2.Location = new Point(0, 463);
+            label2.Location = new Point(0, 347);
             label2.Name = "label2";
-            label2.Size = new Size(174, 20);
+            label2.Size = new Size(142, 16);
             label2.TabIndex = 29;
             label2.Text = "Employee Status";
             // 
@@ -182,9 +194,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("SimSun", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Crimson;
-            label3.Location = new Point(561, 99);
+            label3.Location = new Point(491, 74);
             label3.Name = "label3";
-            label3.Size = new Size(277, 37);
+            label3.Size = new Size(221, 30);
             label3.TabIndex = 31;
             label3.Text = "EMPLOYEE LIST";
             // 
@@ -205,90 +217,93 @@
             bunifuThinButton28.IdleFillColor = Color.White;
             bunifuThinButton28.IdleForecolor = Color.Crimson;
             bunifuThinButton28.IdleLineColor = Color.Crimson;
-            bunifuThinButton28.Location = new Point(129, 622);
-            bunifuThinButton28.Margin = new Padding(6, 5, 6, 5);
+            bunifuThinButton28.Location = new Point(113, 466);
+            bunifuThinButton28.Margin = new Padding(5, 4, 5, 4);
             bunifuThinButton28.Name = "bunifuThinButton28";
-            bunifuThinButton28.Size = new Size(90, 40);
+            bunifuThinButton28.Size = new Size(79, 30);
             bunifuThinButton28.TabIndex = 36;
             bunifuThinButton28.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton28.Click += bunifuThinButton28_Click;
             // 
-            // bunifuThinButton27
+            // DeleteEmp
             // 
-            bunifuThinButton27.ActiveBorderThickness = 1;
-            bunifuThinButton27.ActiveCornerRadius = 20;
-            bunifuThinButton27.ActiveFillColor = Color.Crimson;
-            bunifuThinButton27.ActiveForecolor = Color.White;
-            bunifuThinButton27.ActiveLineColor = Color.Crimson;
-            bunifuThinButton27.BackColor = SystemColors.Control;
-            bunifuThinButton27.BackgroundImage = (Image)resources.GetObject("bunifuThinButton27.BackgroundImage");
-            bunifuThinButton27.ButtonText = "DELETE";
-            bunifuThinButton27.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bunifuThinButton27.ForeColor = Color.Crimson;
-            bunifuThinButton27.IdleBorderThickness = 1;
-            bunifuThinButton27.IdleCornerRadius = 20;
-            bunifuThinButton27.IdleFillColor = Color.White;
-            bunifuThinButton27.IdleForecolor = Color.Crimson;
-            bunifuThinButton27.IdleLineColor = Color.Crimson;
-            bunifuThinButton27.Location = new Point(232, 556);
-            bunifuThinButton27.Margin = new Padding(6, 5, 6, 5);
-            bunifuThinButton27.Name = "bunifuThinButton27";
-            bunifuThinButton27.Size = new Size(90, 40);
-            bunifuThinButton27.TabIndex = 35;
-            bunifuThinButton27.TextAlign = ContentAlignment.MiddleCenter;
+            DeleteEmp.ActiveBorderThickness = 1;
+            DeleteEmp.ActiveCornerRadius = 20;
+            DeleteEmp.ActiveFillColor = Color.Crimson;
+            DeleteEmp.ActiveForecolor = Color.White;
+            DeleteEmp.ActiveLineColor = Color.Crimson;
+            DeleteEmp.BackColor = SystemColors.Control;
+            DeleteEmp.BackgroundImage = (Image)resources.GetObject("DeleteEmp.BackgroundImage");
+            DeleteEmp.ButtonText = "DELETE";
+            DeleteEmp.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DeleteEmp.ForeColor = Color.Crimson;
+            DeleteEmp.IdleBorderThickness = 1;
+            DeleteEmp.IdleCornerRadius = 20;
+            DeleteEmp.IdleFillColor = Color.White;
+            DeleteEmp.IdleForecolor = Color.Crimson;
+            DeleteEmp.IdleLineColor = Color.Crimson;
+            DeleteEmp.Location = new Point(203, 417);
+            DeleteEmp.Margin = new Padding(5, 4, 5, 4);
+            DeleteEmp.Name = "DeleteEmp";
+            DeleteEmp.Size = new Size(79, 30);
+            DeleteEmp.TabIndex = 35;
+            DeleteEmp.TextAlign = ContentAlignment.MiddleCenter;
+            DeleteEmp.Click += DeleteEmp_Click;
             // 
-            // bunifuThinButton26
+            // UpdateEmp
             // 
-            bunifuThinButton26.ActiveBorderThickness = 1;
-            bunifuThinButton26.ActiveCornerRadius = 20;
-            bunifuThinButton26.ActiveFillColor = Color.Crimson;
-            bunifuThinButton26.ActiveForecolor = Color.White;
-            bunifuThinButton26.ActiveLineColor = Color.Crimson;
-            bunifuThinButton26.BackColor = SystemColors.Control;
-            bunifuThinButton26.BackgroundImage = (Image)resources.GetObject("bunifuThinButton26.BackgroundImage");
-            bunifuThinButton26.ButtonText = "UPDATE";
-            bunifuThinButton26.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bunifuThinButton26.ForeColor = Color.Crimson;
-            bunifuThinButton26.IdleBorderThickness = 1;
-            bunifuThinButton26.IdleCornerRadius = 20;
-            bunifuThinButton26.IdleFillColor = Color.White;
-            bunifuThinButton26.IdleForecolor = Color.Crimson;
-            bunifuThinButton26.IdleLineColor = Color.Crimson;
-            bunifuThinButton26.Location = new Point(129, 556);
-            bunifuThinButton26.Margin = new Padding(6, 5, 6, 5);
-            bunifuThinButton26.Name = "bunifuThinButton26";
-            bunifuThinButton26.Size = new Size(90, 40);
-            bunifuThinButton26.TabIndex = 34;
-            bunifuThinButton26.TextAlign = ContentAlignment.MiddleCenter;
+            UpdateEmp.ActiveBorderThickness = 1;
+            UpdateEmp.ActiveCornerRadius = 20;
+            UpdateEmp.ActiveFillColor = Color.Crimson;
+            UpdateEmp.ActiveForecolor = Color.White;
+            UpdateEmp.ActiveLineColor = Color.Crimson;
+            UpdateEmp.BackColor = SystemColors.Control;
+            UpdateEmp.BackgroundImage = (Image)resources.GetObject("UpdateEmp.BackgroundImage");
+            UpdateEmp.ButtonText = "UPDATE";
+            UpdateEmp.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            UpdateEmp.ForeColor = Color.Crimson;
+            UpdateEmp.IdleBorderThickness = 1;
+            UpdateEmp.IdleCornerRadius = 20;
+            UpdateEmp.IdleFillColor = Color.White;
+            UpdateEmp.IdleForecolor = Color.Crimson;
+            UpdateEmp.IdleLineColor = Color.Crimson;
+            UpdateEmp.Location = new Point(113, 417);
+            UpdateEmp.Margin = new Padding(5, 4, 5, 4);
+            UpdateEmp.Name = "UpdateEmp";
+            UpdateEmp.Size = new Size(79, 30);
+            UpdateEmp.TabIndex = 34;
+            UpdateEmp.TextAlign = ContentAlignment.MiddleCenter;
+            UpdateEmp.Click += UpdateEmp_Click;
             // 
-            // bunifuThinButton25
+            // AddEmp
             // 
-            bunifuThinButton25.ActiveBorderThickness = 1;
-            bunifuThinButton25.ActiveCornerRadius = 20;
-            bunifuThinButton25.ActiveFillColor = Color.Crimson;
-            bunifuThinButton25.ActiveForecolor = Color.White;
-            bunifuThinButton25.ActiveLineColor = Color.Crimson;
-            bunifuThinButton25.BackColor = SystemColors.Control;
-            bunifuThinButton25.BackgroundImage = (Image)resources.GetObject("bunifuThinButton25.BackgroundImage");
-            bunifuThinButton25.ButtonText = "ADD";
-            bunifuThinButton25.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bunifuThinButton25.ForeColor = Color.Crimson;
-            bunifuThinButton25.IdleBorderThickness = 1;
-            bunifuThinButton25.IdleCornerRadius = 20;
-            bunifuThinButton25.IdleFillColor = Color.White;
-            bunifuThinButton25.IdleForecolor = Color.Crimson;
-            bunifuThinButton25.IdleLineColor = Color.Crimson;
-            bunifuThinButton25.Location = new Point(24, 556);
-            bunifuThinButton25.Margin = new Padding(6, 5, 6, 5);
-            bunifuThinButton25.Name = "bunifuThinButton25";
-            bunifuThinButton25.Size = new Size(90, 40);
-            bunifuThinButton25.TabIndex = 33;
-            bunifuThinButton25.TextAlign = ContentAlignment.MiddleCenter;
+            AddEmp.ActiveBorderThickness = 1;
+            AddEmp.ActiveCornerRadius = 20;
+            AddEmp.ActiveFillColor = Color.Crimson;
+            AddEmp.ActiveForecolor = Color.White;
+            AddEmp.ActiveLineColor = Color.Crimson;
+            AddEmp.BackColor = SystemColors.Control;
+            AddEmp.BackgroundImage = (Image)resources.GetObject("AddEmp.BackgroundImage");
+            AddEmp.ButtonText = "ADD";
+            AddEmp.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddEmp.ForeColor = Color.Crimson;
+            AddEmp.IdleBorderThickness = 1;
+            AddEmp.IdleCornerRadius = 20;
+            AddEmp.IdleFillColor = Color.White;
+            AddEmp.IdleForecolor = Color.Crimson;
+            AddEmp.IdleLineColor = Color.Crimson;
+            AddEmp.Location = new Point(21, 417);
+            AddEmp.Margin = new Padding(5, 4, 5, 4);
+            AddEmp.Name = "AddEmp";
+            AddEmp.Size = new Size(79, 30);
+            AddEmp.TabIndex = 33;
+            AddEmp.TextAlign = ContentAlignment.MiddleCenter;
+            AddEmp.Click += AddEmp_Click;
             // 
-            // RoomDGV
+            // EmployeeDGV
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            RoomDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -296,9 +311,9 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            RoomDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            RoomDGV.ColumnHeadersHeight = 4;
-            RoomDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            EmployeeDGV.ColumnHeadersHeight = 4;
+            EmployeeDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -306,63 +321,68 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            RoomDGV.DefaultCellStyle = dataGridViewCellStyle3;
-            RoomDGV.GridColor = Color.FromArgb(231, 229, 255);
-            RoomDGV.Location = new Point(448, 188);
-            RoomDGV.Name = "RoomDGV";
-            RoomDGV.RowHeadersVisible = false;
-            RoomDGV.RowHeadersWidth = 51;
-            RoomDGV.Size = new Size(508, 408);
-            RoomDGV.TabIndex = 37;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            RoomDGV.ThemeStyle.BackColor = Color.White;
-            RoomDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            RoomDGV.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            RoomDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            RoomDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            RoomDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            RoomDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            RoomDGV.ThemeStyle.HeaderStyle.Height = 4;
-            RoomDGV.ThemeStyle.ReadOnly = false;
-            RoomDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
-            RoomDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            RoomDGV.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            RoomDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            RoomDGV.ThemeStyle.RowsStyle.Height = 29;
-            RoomDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            RoomDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            EmployeeDGV.GridColor = Color.FromArgb(231, 229, 255);
+            EmployeeDGV.Location = new Point(392, 141);
+            EmployeeDGV.Margin = new Padding(3, 2, 3, 2);
+            EmployeeDGV.Name = "EmployeeDGV";
+            EmployeeDGV.RowHeadersVisible = false;
+            EmployeeDGV.RowHeadersWidth = 51;
+            EmployeeDGV.RowTemplate.Height = 29;
+            EmployeeDGV.Size = new Size(444, 306);
+            EmployeeDGV.TabIndex = 37;
+            EmployeeDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            EmployeeDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            EmployeeDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            EmployeeDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            EmployeeDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            EmployeeDGV.ThemeStyle.BackColor = Color.White;
+            EmployeeDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            EmployeeDGV.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            EmployeeDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            EmployeeDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            EmployeeDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            EmployeeDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            EmployeeDGV.ThemeStyle.HeaderStyle.Height = 4;
+            EmployeeDGV.ThemeStyle.ReadOnly = false;
+            EmployeeDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
+            EmployeeDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            EmployeeDGV.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            EmployeeDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            EmployeeDGV.ThemeStyle.RowsStyle.Height = 29;
+            EmployeeDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            EmployeeDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            EmployeeDGV.CellContentClick += EmployeeDGV_CellContentClick;
             // 
             // Employee
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1017, 696);
-            Controls.Add(RoomDGV);
+            ClientSize = new Size(890, 522);
+            Controls.Add(EmployeeDGV);
             Controls.Add(bunifuThinButton28);
-            Controls.Add(bunifuThinButton27);
-            Controls.Add(bunifuThinButton26);
-            Controls.Add(bunifuThinButton25);
+            Controls.Add(DeleteEmp);
+            Controls.Add(UpdateEmp);
+            Controls.Add(AddEmp);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
+            Controls.Add(EmpStatusCB);
             Controls.Add(label2);
-            Controls.Add(comboBox2);
+            Controls.Add(EmpPositionCb);
             Controls.Add(label4);
-            Controls.Add(textBox4);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox1);
+            Controls.Add(EmpAddTb);
+            Controls.Add(EmpNameTb);
+            Controls.Add(EmpPhoneTb);
+            Controls.Add(EmpIdTb);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Employee";
             Text = "Employee";
+            Load += Employee_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)RoomDGV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EmployeeDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -373,19 +393,19 @@
         private Panel panel1;
         private Label label5;
         private Label label1;
-        private TextBox textBox4;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
+        private TextBox EmpAddTb;
+        private TextBox EmpNameTb;
+        private TextBox EmpPhoneTb;
+        private TextBox EmpIdTb;
+        private ComboBox EmpPositionCb;
         private Label label4;
-        private ComboBox comboBox1;
+        private ComboBox EmpStatusCB;
         private Label label2;
         private Label label3;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton28;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton27;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
-        private Guna.UI2.WinForms.Guna2DataGridView RoomDGV;
+        private Bunifu.Framework.UI.BunifuThinButton2 DeleteEmp;
+        private Bunifu.Framework.UI.BunifuThinButton2 UpdateEmp;
+        private Bunifu.Framework.UI.BunifuThinButton2 AddEmp;
+        private Guna.UI2.WinForms.Guna2DataGridView EmployeeDGV;
     }
 }

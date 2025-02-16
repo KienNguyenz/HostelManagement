@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "E:\\WFA\\HotelMangagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|e:\\wfa\\hotelmangagementsystem\\fees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|solutionrelative:fees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|e:\\wfa\\hotelmangagementsystem\\fees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|solutionrelative:fees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|e:\\wfa\\hotelmangagementsystem\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|e:\\wfa\\hotelmangagementsystem\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|e:\\wfa\\hotelmangagementsystem\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|E:\\WFA\\HotelMangagementSystem\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|solutionrelative:rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|E:\\WFA\\HotelMangagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|e:\\wfa\\hotelmangagementsystem\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD414B27-B86D-4748-B908-D4D7065F1CAB}|HostelMangagementSystem.csproj|solutionrelative:rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,65 +54,66 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Fees.cs",
+              "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Fees.cs",
+              "RelativeDocumentMoniker": "Fees.cs",
+              "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Fees.cs",
+              "RelativeToolTip": "Fees.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAnwJ4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T13:46:46.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Fees.cs [Design]",
+              "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Fees.cs",
+              "RelativeDocumentMoniker": "Fees.cs",
+              "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Fees.cs [Design]",
+              "RelativeToolTip": "Fees.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T13:45:58.356Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Student.cs",
+              "RelativeDocumentMoniker": "Student.cs",
+              "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Student.cs",
+              "RelativeToolTip": "Student.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAuwJQAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T13:51:05.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Student.cs [Design]",
               "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Student.cs",
               "RelativeDocumentMoniker": "Student.cs",
               "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Student.cs [Design]",
               "RelativeToolTip": "Student.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T07:55:33.958Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Rooms.cs",
-              "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Rooms.cs",
-              "RelativeDocumentMoniker": "Rooms.cs",
-              "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Rooms.cs",
-              "RelativeToolTip": "Rooms.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAawEgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T07:53:52.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Student.cs",
-              "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Student.cs",
-              "RelativeDocumentMoniker": "Student.cs",
-              "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Student.cs",
-              "RelativeToolTip": "Student.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAvwFoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T07:52:17.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T03:30:32.303Z",
+              "WhenOpened": "2025-02-16T13:51:00.682Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Rooms.cs [Design]",
-              "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Rooms.cs",
-              "RelativeDocumentMoniker": "Rooms.cs",
-              "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Rooms.cs [Design]",
-              "RelativeToolTip": "Rooms.cs [Design]",
+              "Title": "Employee.cs",
+              "DocumentMoniker": "E:\\WFA\\HotelMangagementSystem\\Employee.cs",
+              "RelativeDocumentMoniker": "Employee.cs",
+              "ToolTip": "E:\\WFA\\HotelMangagementSystem\\Employee.cs",
+              "RelativeToolTip": "Employee.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAjwE4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T08:15:34.252Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-16T13:48:34.544Z",
+              "EditorCaption": ""
             }
           ]
         }

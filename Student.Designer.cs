@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
             StudentDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             panel2 = new Panel();
@@ -58,34 +58,34 @@
             // 
             // StudentDGV
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            StudentDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            StudentDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            StudentDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            StudentDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             StudentDGV.ColumnHeadersHeight = 4;
             StudentDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            StudentDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            StudentDGV.DefaultCellStyle = dataGridViewCellStyle3;
             StudentDGV.GridColor = Color.FromArgb(231, 229, 255);
-            StudentDGV.Location = new Point(384, 227);
+            StudentDGV.Location = new Point(313, 227);
             StudentDGV.Margin = new Padding(3, 2, 3, 2);
             StudentDGV.Name = "StudentDGV";
             StudentDGV.RowHeadersVisible = false;
             StudentDGV.RowHeadersWidth = 51;
             StudentDGV.RowTemplate.Height = 29;
-            StudentDGV.Size = new Size(444, 306);
+            StudentDGV.Size = new Size(692, 383);
             StudentDGV.TabIndex = 37;
             StudentDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             StudentDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -108,6 +108,7 @@
             StudentDGV.ThemeStyle.RowsStyle.Height = 29;
             StudentDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             StudentDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            StudentDGV.CellContentClick += StudentDGV_CellContentClick;
             // 
             // panel2
             // 
@@ -232,6 +233,7 @@
             // 
             // StudStatusCb
             // 
+            StudStatusCb.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
             StudStatusCb.ForeColor = Color.DodgerBlue;
             StudStatusCb.FormattingEnabled = true;
             StudStatusCb.Items.AddRange(new object[] { "Living ", "Left" });
@@ -243,6 +245,7 @@
             // 
             // StudRoomCb
             // 
+            StudRoomCb.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
             StudRoomCb.ForeColor = Color.DodgerBlue;
             StudRoomCb.FormattingEnabled = true;
             StudRoomCb.Location = new Point(151, 474);

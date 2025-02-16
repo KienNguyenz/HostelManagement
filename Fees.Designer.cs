@@ -36,24 +36,23 @@
             panel1 = new Panel();
             label5 = new Label();
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            label2 = new Label();
-            comboBox2 = new ComboBox();
+            UsnCb = new ComboBox();
             label4 = new Label();
-            textBox5 = new TextBox();
-            textBox1 = new TextBox();
+            StudentNameTb = new TextBox();
+            PaymentIdTb = new TextBox();
             label3 = new Label();
             bunifuThinButton28 = new Bunifu.Framework.UI.BunifuThinButton2();
-            bunifuThinButton27 = new Bunifu.Framework.UI.BunifuThinButton2();
-            bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
+            Delete = new Bunifu.Framework.UI.BunifuThinButton2();
+            Update = new Bunifu.Framework.UI.BunifuThinButton2();
             bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
             label6 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            period = new DateTimePicker();
             label7 = new Label();
-            textBox2 = new TextBox();
-            RoomDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            AmountTb = new TextBox();
+            PaymentDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            RoomNumTb = new TextBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)RoomDGV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PaymentDGV).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -101,36 +100,17 @@
             label1.Text = "FEES INFORMATION";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // UsnCb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Working", "Left" });
-            comboBox1.Location = new Point(168, 252);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 23);
-            comboBox1.TabIndex = 38;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("SimSun", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Crimson;
-            label2.Location = new Point(29, 252);
-            label2.Name = "label2";
-            label2.Size = new Size(130, 19);
-            label2.TabIndex = 37;
-            label2.Text = "Room Number";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Mess Staff", "Accountant", "Cleaner", "Hostel In Charge" });
-            comboBox2.Location = new Point(172, 152);
-            comboBox2.Margin = new Padding(3, 2, 3, 2);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(133, 23);
-            comboBox2.TabIndex = 36;
+            UsnCb.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            UsnCb.ForeColor = Color.DodgerBlue;
+            UsnCb.FormattingEnabled = true;
+            UsnCb.Location = new Point(172, 152);
+            UsnCb.Margin = new Padding(3, 2, 3, 2);
+            UsnCb.Name = "UsnCb";
+            UsnCb.Size = new Size(133, 23);
+            UsnCb.TabIndex = 36;
+            UsnCb.SelectionChangeCommitted += UsnCb_SelectionChangeCommitted;
             // 
             // label4
             // 
@@ -143,27 +123,28 @@
             label4.TabIndex = 35;
             label4.Text = "USN";
             // 
-            // textBox5
+            // StudentNameTb
             // 
-            textBox5.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox5.ForeColor = Color.Crimson;
-            textBox5.Location = new Point(64, 200);
-            textBox5.Margin = new Padding(3, 2, 3, 2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(240, 26);
-            textBox5.TabIndex = 32;
-            textBox5.Text = "Student Name";
+            StudentNameTb.Enabled = false;
+            StudentNameTb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            StudentNameTb.ForeColor = Color.Crimson;
+            StudentNameTb.Location = new Point(64, 200);
+            StudentNameTb.Margin = new Padding(3, 2, 3, 2);
+            StudentNameTb.Name = "StudentNameTb";
+            StudentNameTb.Size = new Size(240, 26);
+            StudentNameTb.TabIndex = 32;
+            StudentNameTb.Text = "Student Name";
             // 
-            // textBox1
+            // PaymentIdTb
             // 
-            textBox1.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.Crimson;
-            textBox1.Location = new Point(64, 107);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(240, 26);
-            textBox1.TabIndex = 31;
-            textBox1.Text = "PaymentID";
+            PaymentIdTb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PaymentIdTb.ForeColor = Color.Crimson;
+            PaymentIdTb.Location = new Point(64, 107);
+            PaymentIdTb.Margin = new Padding(3, 2, 3, 2);
+            PaymentIdTb.Name = "PaymentIdTb";
+            PaymentIdTb.Size = new Size(240, 26);
+            PaymentIdTb.TabIndex = 31;
+            PaymentIdTb.Text = "PaymentID";
             // 
             // label3
             // 
@@ -201,53 +182,55 @@
             bunifuThinButton28.TextAlign = ContentAlignment.MiddleCenter;
             bunifuThinButton28.Click += bunifuThinButton28_Click;
             // 
-            // bunifuThinButton27
+            // Delete
             // 
-            bunifuThinButton27.ActiveBorderThickness = 1;
-            bunifuThinButton27.ActiveCornerRadius = 20;
-            bunifuThinButton27.ActiveFillColor = Color.Crimson;
-            bunifuThinButton27.ActiveForecolor = Color.White;
-            bunifuThinButton27.ActiveLineColor = Color.Crimson;
-            bunifuThinButton27.BackColor = SystemColors.Control;
-            bunifuThinButton27.BackgroundImage = (Image)resources.GetObject("bunifuThinButton27.BackgroundImage");
-            bunifuThinButton27.ButtonText = "DELETE";
-            bunifuThinButton27.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bunifuThinButton27.ForeColor = Color.Crimson;
-            bunifuThinButton27.IdleBorderThickness = 1;
-            bunifuThinButton27.IdleCornerRadius = 20;
-            bunifuThinButton27.IdleFillColor = Color.White;
-            bunifuThinButton27.IdleForecolor = Color.Crimson;
-            bunifuThinButton27.IdleLineColor = Color.Crimson;
-            bunifuThinButton27.Location = new Point(203, 419);
-            bunifuThinButton27.Margin = new Padding(5, 4, 5, 4);
-            bunifuThinButton27.Name = "bunifuThinButton27";
-            bunifuThinButton27.Size = new Size(79, 30);
-            bunifuThinButton27.TabIndex = 43;
-            bunifuThinButton27.TextAlign = ContentAlignment.MiddleCenter;
+            Delete.ActiveBorderThickness = 1;
+            Delete.ActiveCornerRadius = 20;
+            Delete.ActiveFillColor = Color.Crimson;
+            Delete.ActiveForecolor = Color.White;
+            Delete.ActiveLineColor = Color.Crimson;
+            Delete.BackColor = SystemColors.Control;
+            Delete.BackgroundImage = (Image)resources.GetObject("Delete.BackgroundImage");
+            Delete.ButtonText = "DELETE";
+            Delete.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Delete.ForeColor = Color.Crimson;
+            Delete.IdleBorderThickness = 1;
+            Delete.IdleCornerRadius = 20;
+            Delete.IdleFillColor = Color.White;
+            Delete.IdleForecolor = Color.Crimson;
+            Delete.IdleLineColor = Color.Crimson;
+            Delete.Location = new Point(203, 419);
+            Delete.Margin = new Padding(5, 4, 5, 4);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(79, 30);
+            Delete.TabIndex = 43;
+            Delete.TextAlign = ContentAlignment.MiddleCenter;
+            Delete.Click += Delete_Click;
             // 
-            // bunifuThinButton26
+            // Update
             // 
-            bunifuThinButton26.ActiveBorderThickness = 1;
-            bunifuThinButton26.ActiveCornerRadius = 20;
-            bunifuThinButton26.ActiveFillColor = Color.Crimson;
-            bunifuThinButton26.ActiveForecolor = Color.White;
-            bunifuThinButton26.ActiveLineColor = Color.Crimson;
-            bunifuThinButton26.BackColor = SystemColors.Control;
-            bunifuThinButton26.BackgroundImage = (Image)resources.GetObject("bunifuThinButton26.BackgroundImage");
-            bunifuThinButton26.ButtonText = "UPDATE";
-            bunifuThinButton26.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bunifuThinButton26.ForeColor = Color.Crimson;
-            bunifuThinButton26.IdleBorderThickness = 1;
-            bunifuThinButton26.IdleCornerRadius = 20;
-            bunifuThinButton26.IdleFillColor = Color.White;
-            bunifuThinButton26.IdleForecolor = Color.Crimson;
-            bunifuThinButton26.IdleLineColor = Color.Crimson;
-            bunifuThinButton26.Location = new Point(113, 419);
-            bunifuThinButton26.Margin = new Padding(5, 4, 5, 4);
-            bunifuThinButton26.Name = "bunifuThinButton26";
-            bunifuThinButton26.Size = new Size(79, 30);
-            bunifuThinButton26.TabIndex = 42;
-            bunifuThinButton26.TextAlign = ContentAlignment.MiddleCenter;
+            Update.ActiveBorderThickness = 1;
+            Update.ActiveCornerRadius = 20;
+            Update.ActiveFillColor = Color.Crimson;
+            Update.ActiveForecolor = Color.White;
+            Update.ActiveLineColor = Color.Crimson;
+            Update.BackColor = SystemColors.Control;
+            Update.BackgroundImage = (Image)resources.GetObject("Update.BackgroundImage");
+            Update.ButtonText = "UPDATE";
+            Update.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Update.ForeColor = Color.Crimson;
+            Update.IdleBorderThickness = 1;
+            Update.IdleCornerRadius = 20;
+            Update.IdleFillColor = Color.White;
+            Update.IdleForecolor = Color.Crimson;
+            Update.IdleLineColor = Color.Crimson;
+            Update.Location = new Point(113, 419);
+            Update.Margin = new Padding(5, 4, 5, 4);
+            Update.Name = "Update";
+            Update.Size = new Size(79, 30);
+            Update.TabIndex = 42;
+            Update.TextAlign = ContentAlignment.MiddleCenter;
+            Update.Click += Update_Click;
             // 
             // bunifuThinButton25
             // 
@@ -272,6 +255,7 @@
             bunifuThinButton25.Size = new Size(79, 30);
             bunifuThinButton25.TabIndex = 41;
             bunifuThinButton25.TextAlign = ContentAlignment.MiddleCenter;
+            bunifuThinButton25.Click += bunifuThinButton25_Click;
             // 
             // label6
             // 
@@ -284,18 +268,19 @@
             label6.TabIndex = 45;
             label6.Text = "Month";
             // 
-            // dateTimePicker1
+            // period
             // 
-            dateTimePicker1.CalendarForeColor = Color.White;
-            dateTimePicker1.CalendarMonthBackground = Color.Crimson;
-            dateTimePicker1.CalendarTitleBackColor = Color.Crimson;
-            dateTimePicker1.CalendarTitleForeColor = Color.Crimson;
-            dateTimePicker1.CalendarTrailingForeColor = Color.Crimson;
-            dateTimePicker1.Location = new Point(113, 317);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(192, 23);
-            dateTimePicker1.TabIndex = 46;
+            period.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            period.CalendarForeColor = Color.White;
+            period.CalendarMonthBackground = Color.Crimson;
+            period.CalendarTitleBackColor = Color.Crimson;
+            period.CalendarTitleForeColor = Color.Crimson;
+            period.CalendarTrailingForeColor = Color.Crimson;
+            period.Location = new Point(113, 317);
+            period.Margin = new Padding(3, 2, 3, 2);
+            period.Name = "period";
+            period.Size = new Size(192, 23);
+            period.TabIndex = 46;
             // 
             // label7
             // 
@@ -308,20 +293,20 @@
             label7.TabIndex = 47;
             label7.Text = "Amount";
             // 
-            // textBox2
+            // AmountTb
             // 
-            textBox2.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.Crimson;
-            textBox2.Location = new Point(112, 372);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(192, 26);
-            textBox2.TabIndex = 48;
+            AmountTb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AmountTb.ForeColor = Color.Crimson;
+            AmountTb.Location = new Point(112, 372);
+            AmountTb.Margin = new Padding(3, 2, 3, 2);
+            AmountTb.Name = "AmountTb";
+            AmountTb.Size = new Size(192, 26);
+            AmountTb.TabIndex = 48;
             // 
-            // RoomDGV
+            // PaymentDGV
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            RoomDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            PaymentDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -329,9 +314,9 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            RoomDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            RoomDGV.ColumnHeadersHeight = 4;
-            RoomDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            PaymentDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            PaymentDGV.ColumnHeadersHeight = 4;
+            PaymentDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -339,68 +324,81 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            RoomDGV.DefaultCellStyle = dataGridViewCellStyle3;
-            RoomDGV.GridColor = Color.FromArgb(231, 229, 255);
-            RoomDGV.Location = new Point(396, 119);
-            RoomDGV.Margin = new Padding(3, 2, 3, 2);
-            RoomDGV.Name = "RoomDGV";
-            RoomDGV.RowHeadersVisible = false;
-            RoomDGV.RowHeadersWidth = 51;
-            RoomDGV.RowTemplate.Height = 29;
-            RoomDGV.Size = new Size(444, 306);
-            RoomDGV.TabIndex = 49;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            RoomDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            RoomDGV.ThemeStyle.BackColor = Color.White;
-            RoomDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            RoomDGV.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            RoomDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            RoomDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            RoomDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            RoomDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            RoomDGV.ThemeStyle.HeaderStyle.Height = 4;
-            RoomDGV.ThemeStyle.ReadOnly = false;
-            RoomDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
-            RoomDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            RoomDGV.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            RoomDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            RoomDGV.ThemeStyle.RowsStyle.Height = 29;
-            RoomDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            RoomDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            PaymentDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            PaymentDGV.GridColor = Color.FromArgb(231, 229, 255);
+            PaymentDGV.Location = new Point(396, 119);
+            PaymentDGV.Margin = new Padding(3, 2, 3, 2);
+            PaymentDGV.Name = "PaymentDGV";
+            PaymentDGV.RowHeadersVisible = false;
+            PaymentDGV.RowHeadersWidth = 51;
+            PaymentDGV.RowTemplate.Height = 29;
+            PaymentDGV.Size = new Size(444, 306);
+            PaymentDGV.TabIndex = 49;
+            PaymentDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            PaymentDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            PaymentDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            PaymentDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            PaymentDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            PaymentDGV.ThemeStyle.BackColor = Color.White;
+            PaymentDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            PaymentDGV.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            PaymentDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            PaymentDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            PaymentDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            PaymentDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            PaymentDGV.ThemeStyle.HeaderStyle.Height = 4;
+            PaymentDGV.ThemeStyle.ReadOnly = false;
+            PaymentDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
+            PaymentDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            PaymentDGV.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            PaymentDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            PaymentDGV.ThemeStyle.RowsStyle.Height = 29;
+            PaymentDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            PaymentDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            PaymentDGV.CellContentClick += PaymentDGV_CellContentClick;
+            // 
+            // RoomNumTb
+            // 
+            RoomNumTb.Enabled = false;
+            RoomNumTb.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            RoomNumTb.ForeColor = Color.Crimson;
+            RoomNumTb.Location = new Point(64, 257);
+            RoomNumTb.Margin = new Padding(3, 2, 3, 2);
+            RoomNumTb.Name = "RoomNumTb";
+            RoomNumTb.Size = new Size(240, 26);
+            RoomNumTb.TabIndex = 50;
+            RoomNumTb.Text = "RoomNumber";
             // 
             // Fees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(890, 522);
-            Controls.Add(RoomDGV);
-            Controls.Add(textBox2);
+            Controls.Add(RoomNumTb);
+            Controls.Add(PaymentDGV);
+            Controls.Add(AmountTb);
             Controls.Add(label7);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(period);
             Controls.Add(label6);
             Controls.Add(bunifuThinButton28);
-            Controls.Add(bunifuThinButton27);
-            Controls.Add(bunifuThinButton26);
+            Controls.Add(Delete);
+            Controls.Add(Update);
             Controls.Add(bunifuThinButton25);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
-            Controls.Add(label2);
-            Controls.Add(comboBox2);
+            Controls.Add(UsnCb);
             Controls.Add(label4);
-            Controls.Add(textBox5);
-            Controls.Add(textBox1);
+            Controls.Add(StudentNameTb);
+            Controls.Add(PaymentIdTb);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "Fees";
             Text = "Fees";
+            Load += Fees_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)RoomDGV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PaymentDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -411,21 +409,20 @@
         private Panel panel1;
         private Label label5;
         private Label label1;
-        private ComboBox comboBox1;
-        private Label label2;
-        private ComboBox comboBox2;
+        private ComboBox UsnCb;
         private Label label4;
-        private TextBox textBox5;
-        private TextBox textBox1;
+        private TextBox StudentNameTb;
+        private TextBox PaymentIdTb;
         private Label label3;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton28;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton27;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
+        private Bunifu.Framework.UI.BunifuThinButton2 Delete;
+        private Bunifu.Framework.UI.BunifuThinButton2 Update;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
         private Label label6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker period;
         private Label label7;
-        private TextBox textBox2;
-        private Guna.UI2.WinForms.Guna2DataGridView RoomDGV;
+        private TextBox AmountTb;
+        private Guna.UI2.WinForms.Guna2DataGridView PaymentDGV;
+        private TextBox RoomNumTb;
     }
 }
